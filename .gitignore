@@ -1,7 +1,8 @@
 
 
 # Ignore all output file
-build/
+# NOTE: maso, 2026: to support github pages.
+# build/
 
 
 # Ignore python files

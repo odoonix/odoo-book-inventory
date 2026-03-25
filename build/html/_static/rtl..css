@@ -1,0 +1,10 @@
+/* begin-custom-color/* <your static path>/custom.css */
+body {
+  direction: rtl !important;
+}
+
+
+pre {
+  direction: ltr !important;
+  text-align: left !important;
+}
