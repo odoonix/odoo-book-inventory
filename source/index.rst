@@ -7,17 +7,15 @@
    `reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
    documentation for details.
 
-کتاب اودوو: حسابداری
+کتاب اودوو: انبارداری
 ===================================
 
-.. اهداف کتاب و منابع اولیه
-   این کتاب به عنوان یک حسابداری مقدماتی طراحی شده که یک نفر با استفاده از آن می‌تواند
-   سیتم بازرگانی خود را با استفاده از نرم افزار اودوو مدیریت کند. اودوو نسخه ۱۸ به عنوان
-   سیستم پایه در نظر گرفته شده است.
 
+.. فایل‌های هر فصل و ساختار پوشه‌ها
+   هر فصل در یک پوشه ایجاد شده که شامل دو فایل هست. یک فایل index که محتوی اصلی فصل در
    نسخه اودوو رایگان برای این کار استفاده شده است. اما برای کاربردی شدن آن ماژولهایی که
    در شرکت اودوونیکس توسعه و یا نگهداری می‌شود به آن اضافه شده که بتواند فرآیندهای مورد
-   نیاز در حسابداری را مدیریت و پیاده سازی کند.
+   نیاز در انبارداری را مدیریت و پیاده سازی کند.
 
 
 .. فایل‌های هر فصل و ساختار پوشه‌ها
@@ -45,26 +43,11 @@
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: فهرست مطالب:
 
    introduction
    history
    chapter001/index
    chapter001/quize
-   chapter002/index
-   chapter002/quize
-   chapter003/index
-   chapter003/quize
-   chapter004/index
-   chapter004/quize
-   chapter005/index
-   chapter005/quize
-   chapter006/index
-   chapter006/quize
-   chapter007/index
-   chapter007/quize
-   chapter008/index
-   chapter008/quize
-   chapter009/index
-   chapter009/quize
+   appendex/index
    

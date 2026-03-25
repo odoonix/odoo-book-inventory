@@ -24,9 +24,9 @@ sys.path.append(str(Path(".").resolve()))
 
 
 
-project = 'Odoo Book: Accounting'
-copyright = '2025, Odoonix'
-author = 'Odoonix'
+project = 'کتاب اودوو: انبارداری'
+copyright = '۱۴۰۵, اودوونیکس'
+author = 'اودوونیکس'
 
 
 extensions = [
@@ -77,7 +77,7 @@ html_context = {
     "rtl": True
 }
 html_theme_options={
-    # direction = "ltr"
+    # "direction":"ltr"
     # analytics_id = "UA-XXXXX-X"
     # website = ""
     # facebook = ""
