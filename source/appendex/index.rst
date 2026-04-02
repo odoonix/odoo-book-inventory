@@ -10,4 +10,5 @@
    :caption: فهرست مطالب:
 
    reserved_quantity_explanation
-   forecasted_report_view.rst
+   forecasted_report_view
+   example_pritti_stock_valuation
