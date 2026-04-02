@@ -1,0 +1,869 @@
+
+<!DOCTYPE html>
+
+
+<html lang="fa" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>بررسی فرآیند رزرو در انبار اودوو ۱۷ &#8212; مستندات کتاب اودوو: انبارداری</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=c96429b2" />
+    <link rel="stylesheet" type="text/css" href="../_static/rtl.css?v=7489687e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=30788233"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/translations.js?v=5df48d09"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'appendex/reserved_quantity_explanation';</script>
+    <link rel="index" title="فهرست" href="../genindex.html" />
+    <link rel="search" title="جستجو" href="../search.html" />
+    <link rel="next" title="نمای Forecast محصول و نحوه پیاده‌سازی داده‌ها در Odoo" href="forecasted_report_view.html" />
+    <link rel="prev" title="پیوست‌ها" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="fa"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">مستندات کتاب اودوو: انبارداری</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../introduction.html">
+    دیباچه
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../history.html">
+    تاریخچه
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../chapter001/index.html">
+    فصل اول: مفاهیم و اصول پایه انبارداری
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../chapter001/quize.html">
+    تمرین‌های فصل اول
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    پیوست‌ها
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="جستجو" aria-label="جستجو" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">جستجو</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="جستجو" aria-label="جستجو" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">جستجو</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../introduction.html">
+    دیباچه
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../history.html">
+    تاریخچه
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../chapter001/index.html">
+    فصل اول: مفاهیم و اصول پایه انبارداری
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../chapter001/quize.html">
+    تمرین‌های فصل اول
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    پیوست‌ها
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">فهرست مطالب:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">بررسی فرآیند رزرو در انبار اودوو ۱۷</a></li>
+<li class="toctree-l1"><a class="reference internal" href="forecasted_report_view.html">نمای Forecast محصول و نحوه پیاده‌سازی داده‌ها در Odoo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example_pritti_stock_valuation.html">نمونه عملی: ارزشگذاری انبار</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="stock_valuation_physical_inventory_analysis.html">راهنمای آموزشی: چرا در Physical Inventory سند حسابداری ساخته نمی‌شود؟</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">پیوست‌ها</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">بررسی فرآیند رزرو در انبار اودوو ۱۷</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="id1">
+<h1>بررسی فرآیند رزرو در انبار اودوو ۱۷<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>رزرو کردن کالا بخشی از فرآیندهای انبار در اودوو است. این کار با استفاده از
+پردازش‌هایی در اودوو انجام می‌شود.</p>
+<p>نکته اینکه در نسخه‌های قدیمی اودوو مثل اودوو ۱۷ این فرآیندها ممکن است از تعادل خارج
+شده و مقدار اشتباهی را ایجاد کنند.
+این مشکل در اودوو ۱۹ حل شد. روش حل پردازش و به روز کردن مقدار این فیلد است.
+شوربختانه در اودووهای قدیمی فرآیند اصلاح در نظر گرفته نشده و منجر به خطاهایی
+می‌شود.</p>
+<p>هدف ما از این سند تعیین تمام جنبه‌های سیستم انبار است به گونه‌ای که بتوانیم فرآیند اصلاح
+این مقدار را پیاده سازی کنیم.</p>
+<section id="id2">
+<h2>تعریف فیلد<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>این فیلد در اودووو به صورت زیر تعریف شده. یک فیلد از داده‌های مدل داده‌ای در انبار به
+نام stock.quant است.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">reserved_quantity</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Float</span><span class="p">(</span>
+    <span class="s1">&#39;Reserved Quantity&#39;</span><span class="p">,</span>
+    <span class="n">default</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
+    <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Quantity of reserved products in this quant, in the default unit of measure of the product&#39;</span><span class="p">,</span>
+    <span class="n">readonly</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">digits</span><span class="o">=</span><span class="s1">&#39;Product Unit of Measure&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>نکات مهم:</p>
+<ul class="simple">
+<li><p>این فیلد <strong>read-only</strong> است (نمی‌تونید مستقیم ازش بنویسید)</p></li>
+<li><p>مقدار پیش‌فرض <strong>0.0</strong> است</p></li>
+<li><p>تنها از طریق متدهای خاص تغییر می‌کنه</p></li>
+</ul>
+<p>در حقیقت این اطلاعات توسط فرآیندهایی که در اودوو و انبار تعریف شده است به روز رسانی
+می‌شود.
+در ادامه این فرآیندها رو بررسی می‌کنیم و نشان می‌دهیم در چه شرایطی این مقدار افزایش یا
+کاهش می‌یابد.</p>
+</section>
+<section id="id3">
+<h2>مقدار فیلد چگونه محاسبه می‌شود<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p>دو تابع اصلی برای به روز کردن این مقدار در نظر گرفته شده است که در ادامه آنها را بررسی
+خواهیم کرد.</p>
+<section id="update-reserved-quantity">
+<h3>_update_reserved_quantity<a class="headerlink" href="#update-reserved-quantity" title="Link to this heading">#</a></h3>
+<p>این تابع برای تعیین مقدار رزرو شده به صورت مستقیم در نظر گرفته شده است. به بیان دیگه
+هر زمان که محاسباتی انجام می‌شه می‌تونیم با استفاده از این تابع تعیین کنیم که چقدر مقدار
+رزرو شده است.</p>
+<div class="admonition note">
+<p class="admonition-title">توجه</p>
+<p>مقدار رزرو شده برای یک مکان خاص هست. مثلا در انبار اول تعداد ۲ واحد از یک محصول
+رزور شده. البته اینکه این مقدار برای چه موردی رزور شده بحث دیگری است.</p>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@api</span><span class="o">.</span><span class="n">model</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">_update_reserved_quantity</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span> <span class="n">product_id</span><span class="p">,</span> <span class="n">location_id</span><span class="p">,</span> <span class="n">quantity</span><span class="p">,</span>
+    <span class="n">lot_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">package_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">owner_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">strict</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Increase or decrease `reserved_quantity` of a set of quants &quot;&quot;&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_update_available_quantity</span><span class="p">(</span>
+        <span class="n">product_id</span><span class="p">,</span> <span class="n">location_id</span><span class="p">,</span>
+        <span class="n">reserved_quantity</span><span class="o">=</span><span class="n">quantity</span><span class="p">,</span>
+        <span class="n">lot_id</span><span class="o">=</span><span class="n">lot_id</span><span class="p">,</span>
+        <span class="n">package_id</span><span class="o">=</span><span class="n">package_id</span><span class="p">,</span>
+        <span class="n">owner_id</span><span class="o">=</span><span class="n">owner_id</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="update-available-quantity">
+<h3>_update_available_quantity<a class="headerlink" href="#update-available-quantity" title="Link to this heading">#</a></h3>
+<p>مهم‌ترین تابعی که برای به روز کردن این مقدار استفاده می‌شود این تابع است. این تابع اطلاعات
+یک stock.quant رو به روز می‌کند. این اطلاعات شامل تعداد کل و تعداد رزور شده است.
+این متد مسئول تغییر <cite>reserved_quantity</cite> است:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@api</span><span class="o">.</span><span class="n">model</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">_update_available_quantity</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span> <span class="n">product_id</span><span class="p">,</span> <span class="n">location_id</span><span class="p">,</span>
+    <span class="n">quantity</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">reserved_quantity</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">lot_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">package_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">owner_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">in_date</span><span class="o">=</span><span class="kc">None</span>
+<span class="p">):</span>
+    <span class="n">quants</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_gather</span><span class="p">(</span><span class="n">product_id</span><span class="p">,</span> <span class="n">location_id</span><span class="p">,</span> <span class="n">lot_id</span><span class="o">=</span><span class="n">lot_id</span><span class="p">,</span>
+                        <span class="n">package_id</span><span class="o">=</span><span class="n">package_id</span><span class="p">,</span> <span class="n">owner_id</span><span class="o">=</span><span class="n">owner_id</span><span class="p">,</span> <span class="n">strict</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">quant</span><span class="p">:</span>
+        <span class="n">vals</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;in_date&#39;</span><span class="p">:</span> <span class="n">in_date</span><span class="p">}</span>
+        <span class="k">if</span> <span class="n">reserved_quantity</span><span class="p">:</span>
+            <span class="n">vals</span><span class="p">[</span><span class="s1">&#39;reserved_quantity&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">quant</span><span class="o">.</span><span class="n">reserved_quantity</span> <span class="o">+</span> <span class="n">reserved_quantity</span>
+        <span class="n">quant</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">vals</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">vals</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;product_id&#39;</span><span class="p">:</span> <span class="n">product_id</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="s1">&#39;location_id&#39;</span><span class="p">:</span> <span class="n">location_id</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="o">...</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="n">reserved_quantity</span><span class="p">:</span>
+            <span class="n">vals</span><span class="p">[</span><span class="s1">&#39;reserved_quantity&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">reserved_quantity</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">vals</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="id4">
+<h2>چطوراین مقدار تعیین می‌شود<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<p>حالت‌های متفاوتی است که این مقدار تعیین و به روز می‌شود.</p>
+<section id="id5">
+<h3>الف) <strong>افزایش</strong> (هنگام رزرو کردن برای فروش یا انتقال)<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>زمانی که یک فروش انجام می‌شود، در صورتی که موجودی داشته باشیم معادل با مقدار فروخته شده
+به آن اضافه می‌شود. برای نمونه فرض کنید که ۵ عدد از محصول فروش رفته در این حالت این تابع
+فراخوانی می‌شود تا ۵ واحد افزایش یابد.</p>
+<p>در نتیجه این فراخوانی حالت‌های زیر رخ می‌دهد.</p>
+<ul class="simple">
+<li><p><cite>reserved_quantity</cite> از 0 به 5 تغییر می‌کنه</p></li>
+<li><p><cite>available_quantity</cite> کاهش می‌یابه (چون <cite>available = quantity - reserved_quantity</cite>)</p></li>
+</ul>
+</section>
+<section id="id6">
+<h3>ب) <strong>کاهش</strong> (هنگام لغو رزرو یا تایید حرکت)<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<p>فرض کنید که فروش لغو شود یا در عمل انتقال انجام شده و مشتری محصول خود را دریافت کرده.
+در این حالت باید مقدار کاسته شود. کد زیر معادل انجام این کار است. در نظر بگیرید که با
+استفاده از مقدار منفی این کار  انجام شده است.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">stock_quant</span><span class="o">.</span><span class="n">_update_reserved_quantity</span><span class="p">(</span>
+    <span class="n">product_id</span><span class="o">=</span><span class="n">product</span><span class="p">,</span>
+    <span class="n">location_id</span><span class="o">=</span><span class="n">warehouse_location</span><span class="p">,</span>
+    <span class="n">quantity</span><span class="o">=-</span><span class="mi">5</span>  <span class="c1"># ← عدد منفی برای کم کردن</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="quantity-reserved-quantity-available-quantity">
+<h2>رابطه بین quantity، reserved_quantity و available_quantity<a class="headerlink" href="#quantity-reserved-quantity-available-quantity" title="Link to this heading">#</a></h2>
+<p>همانطور که می‌دانید در اودوو مقادیر متفاوتی برای هر محل در نظر گرفته شده است. فهرست زیر
+این مقادیر را نشان می‌دهد.</p>
+<ul class="simple">
+<li><p>quantity</p></li>
+<li><p>available_quantity</p></li>
+<li><p>reseverd_quantity</p></li>
+</ul>
+<p>این مقادیر با هم در رابطه هستند. رابطه بین این مقادیر به صورت زیر محاسبه می‌شود.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@api</span><span class="o">.</span><span class="n">depends</span><span class="p">(</span><span class="s1">&#39;quantity&#39;</span><span class="p">,</span> <span class="s1">&#39;reserved_quantity&#39;</span><span class="p">)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">_compute_available_quantity</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">quant</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>
+        <span class="n">quant</span><span class="o">.</span><span class="n">available_quantity</span> <span class="o">=</span> <span class="n">quant</span><span class="o">.</span><span class="n">quantity</span> <span class="o">-</span> <span class="n">quant</span><span class="o">.</span><span class="n">reserved_quantity</span>
+</pre></div>
+</div>
+<p>نکته‌ای که باید همیشه در نظر بگیریم، مقدار reserved_quantity هیچ گاه منفی نمی‌شود و همواره
+یک مقدار مثتب است. بنابر این مقادیر در دسترسی همواره کوچکتر یا مساوی مقادیر موجود خواهد
+بود.</p>
+<section id="id7">
+<h3>مثال عملی:<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">quantity</span>          <span class="o">=</span> <span class="mi">100</span>  <span class="p">(</span><span class="n">کل</span> <span class="n">موجودی</span> <span class="n">فیزیکی</span><span class="p">)</span>
+<span class="n">reserved_quantity</span> <span class="o">=</span> <span class="mi">30</span>   <span class="p">(</span><span class="n">رزرو</span> <span class="n">شده</span> <span class="n">برای</span> <span class="n">فروش</span><span class="p">)</span>
+<span class="n">available_quantity</span><span class="o">=</span> <span class="mi">70</span>   <span class="p">(</span><span class="n">قابل</span> <span class="n">استفاده</span> <span class="n">برای</span> <span class="n">سفارش</span> <span class="n">جدید</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="id8">
+<h2>جریان عملیاتی<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<p>در عمل فرآیند کلی سیستم برای افزایش و یا کاهش این مقدار در نمودار زیر نمایش داده شده
+است.
+در عمل دوبار برای یک فروش این کار انجام می‌شود. زمانی که فروش ایجاد می‌شود این رزور انجام
+شده و هنگامی که تحویل داده می‌شود این رزور حذف می‌شود.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>1. ایجاد Sales Order
+↓
+2. Confirm Sale Order
+↓
+3. Create Stock Move (stock.move)
+↓
+4. Assign Stock Move (stock.move._action_assign)
+↓
+5. _update_reserved_quantity فراخوانی می‌شه
+↓
+6. reserved_quantity افزایش می‌یابه (مثلاً 30 به جای 0)
+↓
+7. Picking Validated / Goods Transferred
+↓
+8. _update_reserved_quantity با عدد منفی فراخوانی می‌شه
+↓
+9. reserved_quantity کاهش می‌یابه (30 به 0)
+↓
+10. موجودی فیزیکی کم می‌شه (quantity: 100 → 70)
+</pre></div>
+</div>
+</section>
+<section id="get-reserve-quantity">
+<h2>متد <cite>_get_reserve_quantity</cite> محاسبه رزرو ممکن<a class="headerlink" href="#get-reserve-quantity" title="Link to this heading">#</a></h2>
+<p>حالا یک سوال مهم وجود دارد: چه مقدار را می‌توان رزور کرد؟ این تابع این محاسبه رو انجام
+می‌دهد.</p>
+<p>مقدار ممکن برای رزور شدن برابر با حداقل بین تعداد موجودی و تعداد در دسترس است. زمانی
+که مقدار رزور به اشتباه منفی باشد انگاه مقدار دردسترس به اشتباه بیشتر از مقدار موجودی
+است در این حالت ما تنها موجودی را برای رزروو کردن در نظر می‌گیرم.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">_get_reserve_quantity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">product_id</span><span class="p">,</span> <span class="n">location_id</span><span class="p">,</span> <span class="n">quantity</span><span class="p">,</span> <span class="o">...</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; این متد محاسبه می‌کنه که چی قدر می‌تونه رزرو کنه &quot;&quot;&quot;</span>
+
+    <span class="n">quants</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_gather</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+    <span class="n">available_quantity</span> <span class="o">=</span> <span class="n">quants</span><span class="o">.</span><span class="n">_get_available_quantity</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+
+    <span class="c1"># فقط اونقدر رزرو می‌کنه که موجودی داشته باشه</span>
+    <span class="n">quantity</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">quantity</span><span class="p">,</span> <span class="n">available_quantity</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">reserved_quants</span>  <span class="c1"># لیست quants و مقدار رزرو شده</span>
+</pre></div>
+</div>
+</section>
+<section id="id9">
+<h2>این رزرو مربوط به کدام فروش است؟<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<p>این سوال بسیار مهم است. در اودوو داده‌ی لازم وجود دارد، اما این نگاشت به صورت مستقیم روی
+<cite>stock.quant</cite> ذخیره نمی‌شود.</p>
+<p>در بخش بعد نما forcast توضیح داده شده است. این نما با استفاده از داده‌هایی نمایش داده
+می‌شود که در عمل ذخیره شده در پایگاه داده نیست و در زمان مورد نیاز محاسبه می‌شود.</p>
+<p>در واقع فیلد reserved_quantity تعیین می‌کن که از ترکیب
+داده‌ای <cite>(product, location, lot, package, owner)</cite> چه تعدادی رزروی شده است. اطلاعاتی
+بیشتری در مدل داده‌ای stock.quant وجود ندارد.</p>
+<p>اینکه این رزرو برای کدام فروش است،
+از مسیر  <cite>sale.order.line -&gt; stock.move -&gt; stock.move.line</cite>    قابل ردیابی است.
+مثلا اگر بخواهید بدانید که از یک مکان چه فروش‌هایی رزور شده و به چه تعداد باید تمام
+رکوردهای stock.move.line را پیدا کنید که با یک stock.quant در ارتباط است و چه مقداری
+از آن استفاده شده است.</p>
+<p>البته ممکن است stock.move.line های وجود داشته باشد که قبلا ایجاد شده و انجام شده یا کنسل
+شده است. این موارد را نباید در نظر بگیرید.
+در این بخش در رابطه با این موضوع به صورت کامل توضیح می‌دهیم و نشان می‌دیم که چطور رزرو
+در سیستم انبارداری انجام می‌شود.</p>
+<section id="id10">
+<h3>فیلدهای کلیدی<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
+<p>باید بررسی کنیم که چه فیلدها و داده‌هایی ایجاد شده تا بتوانیم تعیین کنیم چه مقدار از
+محصولات رزرو شده است و مربوط به کدام فروش است.</p>
+<section id="stock-delivery">
+<h4>Stock Delivery<a class="headerlink" href="#stock-delivery" title="Link to this heading">#</a></h4>
+<p>اولین مدل داده‌ای که وجود دارد، stock.delivery است که تعیین می‌کند یک محموله باید برای
+یک آدرس خاص ارسال شود.
+برای نمونه می‌توانید فرض کنید که محصول کتاب را می‌خواهیم برای مشتری به نام علی ارسال کنیم
+در این صورت باید یک stock.delivery ایجاد شود که در آن مشخص می‌شود محصول کتاب برای مشتری
+به نام علی باید ارسال شود.</p>
+</section>
+<section id="stock-move">
+<h4>Stock Move<a class="headerlink" href="#stock-move" title="Link to this heading">#</a></h4>
+<p>یک محموله ممکن است شامل محصولات متفاوتی باشد. برای دنبال کردن آن نیاز است که هر محصول
+به صورت جداگانه مدیریت شود. از این رو هر stock.delivery به ازای هر محصول شامل یک بخش
+جدید است که به آن stock.move می‌گوییم. در حقیقت معادل سطرهای فروش هستند که در آن محصول
+و تعداد مشخص می‌شود.</p>
+<p>در مدل داده‌ای stock.move یک فیلد به نام sale_line_id وجود دارد که تعیین می‌کند هر رکورد
+در رابطه با کدام سطر فروش ایجاد شده است.</p>
+<p>این فیلد به صورت زیر تعریف می‌شود:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sale_line_id</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Many2one</span><span class="p">(</span>
+    <span class="s1">&#39;sale.order.line&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Sale Line&#39;</span><span class="p">,</span>
+    <span class="n">index</span><span class="o">=</span><span class="s1">&#39;btree_not_null&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>حالا باید این امکان وجود داشته باشد که تمام سطرهای موجود در یک stock.delivery در دسترسی
+باشد. برای این کار یک فیلد به صورت زیر ایجاد شده که تمام stock.move ها از stock.delivery
+در دسترس باشد. این فیلد به صورت زیر تعریف می‌شود.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">move_ids</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">One2many</span><span class="p">(</span>
+    <span class="s1">&#39;stock.move&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;sale_line_id&#39;</span><span class="p">,</span>
+    <span class="n">string</span><span class="o">=</span><span class="s1">&#39;Stock Moves&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="stock-move-line">
+<h4>Stock Move Line<a class="headerlink" href="#stock-move-line" title="Link to this heading">#</a></h4>
+<p>حالا یک مسئله دیگه ایجاد می‌شود، ممکن است تعداد محصول مورد نظر امکان ارسال از یک نقطه و
+حتی در یک زمان واحد وجود نداشته باشد.
+در این حالت باید رکوردهایی ایجاد کنیم که تعیین می‌کند از آن محصول با چه تعدادی برای مشتری
+ارسال می‌شود.
+این کار با استفاده از رکوردهایی از نوع stock.move.line ایجاد می‌شود.</p>
+<p>در گام اول در هر stock.move باید یک فیلد اضافه شود که لیست تمام stock.move.line ها ذخیره
+شود. فیلد move_ids برای این کار در نظر گرفته شده است.
+این فیلد به صورت زیر تعریف می‌شود:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">move_line_ids</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">One2many</span><span class="p">(</span>
+    <span class="s1">&#39;stock.move.line&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;move_id&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>البته فیلد اصلی move_id است که در stock.move.line   تعریف شده است. این فیلد تعیین می‌کند
+که یک رکورد به کدام stock.move رابطه دارد. این فیدل هم به صورت زیر تعریف می شود:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">move_id</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Many2one</span><span class="p">(</span>
+    <span class="s1">&#39;stock.move&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Stock Operation&#39;</span><span class="p">,</span>
+    <span class="n">check_company</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">index</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>رزرو واقعی در انبار داری در رکوردهای
+stock.move.line
+انجام می‌شود. در این رکورد تعیین می‌شود که چه تعداد از کدام محل تامین خواهد شد. فیلدهایی
+که برای ذخیره کردن این اطلاعات در نظر گرفته شده است در زیر فهرست شده است:</p>
+<ul class="simple">
+<li><p>product_id: چه محصولی</p></li>
+<li><p>quantity:  چه تعداد</p></li>
+<li><p>quant_id:  از کدام موجودی</p></li>
+<li><p>location_id:  از کجا</p></li>
+<li><p>location_dest_id:  به کجا</p></li>
+<li><p>state:  در چه حالتی</p></li>
+</ul>
+<p>البته فیلدهای زیادی وجود دارد اما این فیلدها برای رزرو کردن اساسی هستند.</p>
+</section>
+</section>
+<section id="id11">
+<h3>پس نگاشت چگونه ساخته می‌شود؟<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
+<p>منظور ما از نگاشت این هست که کدام موجودی به کدام فروش نگاشت می‌شود؟ بر اساس مدل داده‌ای
+که در بالا توضیح داده شد
+stock.move.line
+بسیار کلید است. زمانی که یک stock.move ایجاد می‌شود هیچ جزئیات بیشتری ندارد.
+معنی این رکورد این می‌شود که چه تعداد محصولی باید تحویل داده شود.
+حالا فرآیندهای متفاوت اجرا شده و رکوردهای stock.move.line را ایجاد می‌کنند. در نهایت با
+این فرآیند نگاشت تکمیل می‌شود.</p>
+<p>حالا یک سفارش فروش را فرض کنید. برای یک سفارش فروش:</p>
+<ul class="simple">
+<li><p>از <cite>sale.order.line</cite>، <cite>move_ids</cite> را می‌گیریم.</p></li>
+<li><p>از هر <cite>stock.move</cite>، <cite>move_line_ids</cite> رزروشده را می‌گیریم.</p></li>
+<li><dl class="simple">
+<dt>هر <cite>move_line</cite> با مشخصات <cite>(product_id, location_id, lot_id, package_id, owner_id)</cite></dt><dd><p>به <cite>stock.quant</cite> متناظر وصل می‌شود.</p>
+</dd>
+</dl>
+</li>
+<li><p>مجموع این رزروها باید با <cite>stock.quant.reserved_quantity</cite> در همان کلیدها هم‌خوان باشد.</p></li>
+</ul>
+<p>در اودوو ۱۷، فیلد <cite>quant_id</cite> روی <cite>stock.move.line</cite> یک فیلد نمایشی/کمکی است و دائمی
+نیست (<cite>store=False</cite>). بنابراین اتصال Move Line به Quant عمدتاً بر اساس مشخصات
+مشترک انجام می‌شود، نه یک کلید خارجی پایدار و همیشگی.</p>
+</section>
+<section id="id12">
+<h3>جریان کامل از فروش تا رزرو<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
+<p>حالا می‌خواهیم تمام داده‌ها و فرآیندها را در کنار هم قرار بدیم تا از فروش شروع کنیم
+و به یک رزرو  محصول برسیم.</p>
+<ol class="arabic simple">
+<li><p>تایید فروش (<cite>sale.order</cite>)</p></li>
+<li><p>اجرای <cite>procurement</cite> و ساخت <cite>stock.move</cite> با <cite>sale_line_id</cite></p></li>
+<li><p>هنگام assign، ایجاد/به‌روزرسانی <cite>stock.move.line</cite></p></li>
+<li><dl class="simple">
+<dt>در <cite>stock.move.line.create/write/unlink</cite>، متد</dt><dd><p><cite>stock.quant._update_reserved_quantity(...)</cite> فراخوانی می‌شود</p>
+</dd>
+</dl>
+</li>
+<li><p>مقدار <cite>reserved_quantity</cite> روی quant به‌روزرسانی می‌شود</p></li>
+</ol>
+</section>
+<section id="id13">
+<h3>جمع‌بندی<a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><dl class="simple">
+<dt>اگر بخواهیم بدانیم «کدام فروش چه چیزی را رزرو کرده»، باید از <cite>stock.move.sale_line_id</cite></dt><dd><p>و <cite>stock.move.line</cite> استفاده کنیم.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>اگر بخواهیم بدانیم «در یک quant چقدر رزرو وجود دارد»، از <cite>stock.quant.reserved_quantity</cite></dt><dd><p>استفاده می‌کنیم.</p>
+</dd>
+</dl>
+</li>
+<li><p>این دو نما مکمل هم هستند: یکی نمای عملیاتی فروش، یکی نمای تجمیعی موجودی.</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">قبلی</p>
+        <p class="prev-next-title">پیوست‌ها</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="forecasted_report_view.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">بعدی</p>
+        <p class="prev-next-title">نمای Forecast محصول و نحوه پیاده‌سازی داده‌ها در Odoo</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">تعریف فیلد</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">مقدار فیلد چگونه محاسبه می‌شود</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#update-reserved-quantity">_update_reserved_quantity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#update-available-quantity">_update_available_quantity</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">چطوراین مقدار تعیین می‌شود</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">الف) <strong>افزایش</strong> (هنگام رزرو کردن برای فروش یا انتقال)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">ب) <strong>کاهش</strong> (هنگام لغو رزرو یا تایید حرکت)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quantity-reserved-quantity-available-quantity">رابطه بین quantity، reserved_quantity و available_quantity</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">مثال عملی:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">جریان عملیاتی</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-reserve-quantity">متد <cite>_get_reserve_quantity</cite> محاسبه رزرو ممکن</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">این رزرو مربوط به کدام فروش است؟</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">فیلدهای کلیدی</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stock-delivery">Stock Delivery</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stock-move">Stock Move</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stock-move-line">Stock Move Line</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">پس نگاشت چگونه ساخته می‌شود؟</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">جریان کامل از فروش تا رزرو</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">جمع‌بندی</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  <div role="note" aria-label="source link">
+    <h3>صفحه فعلی</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/appendex/reserved_quantity_explanation.rst.txt"
+            rel="nofollow">نمایش سورس</a></li>
+    </ul>
+   </div></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright ۱۴۰۵, اودوونیکس.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    ایجاد شده با<a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

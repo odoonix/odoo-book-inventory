@@ -1,0 +1,802 @@
+
+<!DOCTYPE html>
+
+
+<html lang="fa" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Practical Example: Inventory Valuation &#8212; مستندات کتاب اودوو: انبارداری</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=c96429b2" />
+    <link rel="stylesheet" type="text/css" href="../_static/rtl.css?v=7489687e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=30788233"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/translations.js?v=5df48d09"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'appendex/example_pritti_stock_valuation_en';</script>
+    <link rel="index" title="فهرست" href="../genindex.html" />
+    <link rel="search" title="جستجو" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="fa"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">مستندات کتاب اودوو: انبارداری</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../introduction.html">
+    دیباچه
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../history.html">
+    تاریخچه
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../chapter001/index.html">
+    فصل اول: مفاهیم و اصول پایه انبارداری
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../chapter001/quize.html">
+    تمرین‌های فصل اول
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="index.html">
+    پیوست‌ها
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="جستجو" aria-label="جستجو" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">جستجو</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="جستجو" aria-label="جستجو" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">جستجو</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../introduction.html">
+    دیباچه
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../history.html">
+    تاریخچه
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../chapter001/index.html">
+    فصل اول: مفاهیم و اصول پایه انبارداری
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../chapter001/quize.html">
+    تمرین‌های فصل اول
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="index.html">
+    پیوست‌ها
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Practical Example: Inventory Valuation</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="practical-example-inventory-valuation">
+<h1>Practical Example: Inventory Valuation<a class="headerlink" href="#practical-example-inventory-valuation" title="Link to this heading">#</a></h1>
+<p>Odoo is an integrated enterprise resource planning (ERP) software. It connects inventory
+management and accounting processes. This means that any operation performed in the warehouse
+automatically affects inventory and company accounting.</p>
+<p>Inventory valuation is one of the most important processes in this integration. This process
+is used to determine the value of inventory and verify its accuracy. Odoo supports this
+process in a comprehensive and automatic way.</p>
+<div class="admonition note">
+<p class="admonition-title">توجه</p>
+<p>To read the official Odoo documentation about inventory counting, visit the
+<a class="reference external" href="https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.html">Odoo Documentation Link</a>.</p>
+</div>
+<p><strong>Purpose of this chapter:</strong></p>
+<p>In this chapter, we examine Pretti Design company as a practical example. We cover:</p>
+<ul class="simple">
+<li><p>Correct setup of Odoo for the inventory valuation process</p></li>
+<li><p>Steps for inventory counting and physical inventory</p></li>
+<li><p>Connection between inventory adjustment and accounting records</p></li>
+<li><p>Using reports for monitoring and troubleshooting</p></li>
+<li><p>Best practices for implementation in the organization</p></li>
+</ul>
+</section>
+<section id="part-one-system-setup-and-preparation">
+<h1>Part One: System Setup and Preparation<a class="headerlink" href="#part-one-system-setup-and-preparation" title="Link to this heading">#</a></h1>
+<p>System setup is the foundation for a correct inventory valuation process. We can divide
+these settings into several levels:</p>
+<ol class="arabic simple">
+<li><p><strong>General Inventory Settings</strong> - Applied to the entire system</p></li>
+<li><p><strong>Location Settings</strong> - Applied to each storage point</p></li>
+<li><p><strong>Product Settings</strong> - Applied to each item</p></li>
+<li><p><strong>Accounting Settings</strong> - Connect inventory and accounting modules</p></li>
+</ol>
+<section id="general-inventory-settings">
+<h2>General Inventory Settings<a class="headerlink" href="#general-inventory-settings" title="Link to this heading">#</a></h2>
+<p>General inventory settings affect all valuation processes. To access these settings,
+follow this path:</p>
+<p><strong>Inventory app</strong> → <strong>Configuration</strong> → <strong>Settings</strong></p>
+<p>The image below shows the general settings:</p>
+<a class="reference internal image-reference" href="../_images/eg_image_000.png"><img alt="General inventory settings" class="align-center" src="../_images/eg_image_000.png" style="width: 600px;" />
+</a>
+<p><strong>Recommended settings for Pretti Design company:</strong></p>
+<ul class="simple">
+<li><p><strong>Landed Cost</strong>: Enabled (True) - This setting allows you to add extra costs
+(such as shipping and insurance) to the value of products</p></li>
+<li><p><strong>Default Journal</strong>: Inventory Valuation - The journal used to record changes
+in inventory value</p></li>
+</ul>
+</section>
+<section id="managing-warehouses">
+<h2>Managing Warehouses<a class="headerlink" href="#managing-warehouses" title="Link to this heading">#</a></h2>
+<p>A warehouse is a physical location where products are stored. Odoo allows you to
+manage multiple warehouses.</p>
+<p>To create or manage warehouses, follow this path:</p>
+<p><strong>Inventory app</strong> → <strong>Configuration</strong> → <strong>Warehouses</strong></p>
+<a class="reference internal image-reference" href="../_images/eg_image_001.png"><img alt="List of warehouses" class="align-center" src="../_images/eg_image_001.png" style="width: 600px;" />
+</a>
+<p>In each warehouse, you can define specific settings:</p>
+<a class="reference internal image-reference" href="../_images/eg_image_002.png"><img alt="Warehouse settings" class="align-center" src="../_images/eg_image_002.png" style="width: 600px;" />
+</a>
+<p><strong>Most important settings:</strong></p>
+<ul class="simple">
+<li><p><strong>Inventory Key</strong>: A unique code to identify the warehouse</p></li>
+<li><p><strong>Input Location</strong>: Where received goods are moved to</p></li>
+<li><p><strong>Output Location</strong>: Where sold goods are taken from</p></li>
+</ul>
+</section>
+<section id="storage-locations">
+<h2>Storage Locations<a class="headerlink" href="#storage-locations" title="Link to this heading">#</a></h2>
+<p>A location is a more precise point defined inside a warehouse. For example, a warehouse
+might have different shelves, special compartments for hot or cold items, and so on.</p>
+<p>To create or manage locations, follow this path:</p>
+<p><strong>Inventory app</strong> → <strong>Configuration</strong> → <strong>Locations</strong></p>
+<p>The image below shows the locations of Pretti Design company:</p>
+<a class="reference internal image-reference" href="../_images/eg_image_003.png"><img alt="Storage locations" class="align-center" src="../_images/eg_image_003.png" style="width: 600px;" />
+</a>
+<p><strong>Location naming:</strong></p>
+<p>At Pretti Design, locations are named using this pattern:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>{Warehouse Key}/Stock
+</pre></div>
+</div>
+<p>For example: <code class="docutils literal notranslate"><span class="pre">WH01/Stock</span></code> or <code class="docutils literal notranslate"><span class="pre">WH02/Stock</span></code></p>
+<p><strong>Location settings:</strong></p>
+<p>Each location has special settings that are important for periodic counting:</p>
+<a class="reference internal image-reference" href="../_images/eg_image_004.png"><img alt="Location settings" class="align-center" src="../_images/eg_image_004.png" style="width: 600px;" />
+</a>
+<p>In the image above, point number 1 shows:</p>
+<ul class="simple">
+<li><p><strong>Inventory Frequency</strong>: Determines how often the warehouse should be counted</p></li>
+<li><p><strong>Last Inventory Date</strong>: Recorded automatically</p></li>
+<li><p><strong>Next Inventory Date</strong>: Calculated based on the frequency</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">توجه</p>
+<p>If inventory counting is done periodically (for example, every 3 months), these
+settings help you count the warehouse on time.</p>
+</div>
+</section>
+<section id="product-categories">
+<h2>Product Categories<a class="headerlink" href="#product-categories" title="Link to this heading">#</a></h2>
+<p>A category is a powerful tool for organizing products. Each category can have its own
+settings that apply to all products in that category.</p>
+<p>To manage categories, follow this path:</p>
+<p><strong>Inventory app</strong> → <strong>Configuration</strong> → <strong>Product Categories</strong></p>
+<a class="reference internal image-reference" href="../_images/eg_image_005.png"><img alt="Product categories" class="align-center" src="../_images/eg_image_005.png" style="width: 600px;" />
+</a>
+<p><strong>Why categories are important:</strong></p>
+<p>Product categories are very important for the inventory valuation process. Settings such as
+the valuation method (FIFO, LIFO, Weighted Average) and the journal for transfers are
+defined in the category.</p>
+<a class="reference internal image-reference" href="../_images/eg_image_006.png"><img alt="Product category settings" class="align-center" src="../_images/eg_image_006.png" style="width: 600px;" />
+</a>
+<p><strong>Recommended category structure:</strong></p>
+<p>Product categories have a hierarchical structure. Odoo uses this structure to inherit
+settings. We recommend using these main categories:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>All (Main)
+├── Purchase
+├── Sale
+├── Shipping
+└── Consumable
+</pre></div>
+</div>
+<p><strong>Best practice:</strong></p>
+<p>Move all other categories to the e-commerce section. This makes the system simpler
+and easier to manage.</p>
+<div class="admonition note">
+<p class="admonition-title">توجه</p>
+<p>The <strong>Inventory Valuation</strong> field is normally set to <strong>Real Time</strong> (or Perpetual).
+This means that whenever inventory changes, an accounting record is created automatically.</p>
+</div>
+</section>
+<section id="product-settings">
+<h2>Product Settings<a class="headerlink" href="#product-settings" title="Link to this heading">#</a></h2>
+<p>Products are the core of the inventory system. Correct product settings affect the
+accuracy of the valuation process.</p>
+<p>To set up products, follow this path:</p>
+<p><strong>Inventory app</strong> → <strong>Products</strong> → <strong>Products</strong></p>
+<a class="reference internal image-reference" href="../_images/eg_image_007.png"><img alt="Product list" class="align-center" src="../_images/eg_image_007.png" style="width: 600px;" />
+</a>
+<p><strong>Open and configure a product:</strong></p>
+<p>Select the product you want to configure to open its settings form:</p>
+<a class="reference internal image-reference" href="../_images/eg_image_008.png"><img alt="Product settings" class="align-center" src="../_images/eg_image_008.png" style="width: 600px;" />
+</a>
+<p><strong>Recommended settings for a sellable and traceable product:</strong></p>
+<ul class="simple">
+<li><p><strong>Sale</strong>: Enabled</p></li>
+<li><p><strong>Purchase</strong>: Enabled</p></li>
+<li><p><strong>Product Type</strong>: Good (Physical product)</p></li>
+<li><p><strong>Track Inventory</strong>: Enabled</p></li>
+<li><p><strong>Category</strong>: All / Sale or another suitable category</p></li>
+</ul>
+<p><strong>Important note:</strong></p>
+<p>Other settings such as the valuation method are automatically inherited from the product
+category. This simplifies the work and ensures that all products in a category have the
+same settings.</p>
+</section>
+<section id="accounting-settings-for-inventory">
+<h2>Accounting Settings for Inventory<a class="headerlink" href="#accounting-settings-for-inventory" title="Link to this heading">#</a></h2>
+<p>After setting up the warehouse, products, and categories, you need to prepare accounting
+to receive inventory data. These settings create a connection between the inventory and
+accounting modules.</p>
+<p>To access these settings, follow this path:</p>
+<p><strong>Accounting app</strong> → <strong>Configuration</strong> → <strong>Settings</strong></p>
+<div class="admonition warning">
+<p class="admonition-title">هشدار</p>
+<p>These settings are only available in the <strong>Enterprise</strong> version of Odoo.
+If you use the <strong>Community</strong> version, these features are not available.</p>
+</div>
+<a class="reference internal image-reference" href="../_images/eg_image_009.png"><img alt="Accounting inventory settings" class="align-center" src="../_images/eg_image_009.png" style="width: 600px;" />
+</a>
+<p><strong>Recommended settings:</strong></p>
+<ul>
+<li><p><strong>Inventory Valuation</strong>: Real Time (Perpetual)</p>
+<p>This means that inventory changes are immediately recorded in accounting.</p>
+</li>
+<li><p><strong>Periodic Valuation</strong>: Daily</p>
+<p>How often to recalculate inventory value.</p>
+</li>
+<li><p><strong>Inventory Cost Method</strong>: Average Cost (AVCO)</p>
+<p>A method to calculate the average value of products. Other methods are FIFO and LIFO.</p>
+</li>
+<li><p><strong>Journal</strong>: Inventory Valuation</p>
+<p>The journal used to record inventory entries.</p>
+</li>
+</ul>
+</section>
+</section>
+<section id="part-two-counting-and-physical-inventory-process">
+<h1>Part Two: Counting and Physical Inventory Process<a class="headerlink" href="#part-two-counting-and-physical-inventory-process" title="Link to this heading">#</a></h1>
+<p>Now that the settings are complete, we can start the actual inventory counting and
+adjustment process.</p>
+<p>Pretti Design uses the <strong>on-demand counting</strong> method. This means that inventory
+adjustment is not periodic. Instead, it is done whenever needed. For this reason,
+warehouse settings are set to <strong>Real Time (Perpetual)</strong>.</p>
+<p><strong>Ways to enter counting data:</strong></p>
+<p>Odoo supports two ways to enter counting data:</p>
+<ol class="arabic simple">
+<li><p><strong>Manual method</strong>: For small counts or specific items</p></li>
+<li><p><strong>Excel file method</strong>: For large counts or batch entries</p></li>
+</ol>
+<section id="method-one-manual-counting">
+<h2>Method One: Manual Counting<a class="headerlink" href="#method-one-manual-counting" title="Link to this heading">#</a></h2>
+<p>This method is suitable for small counts or when there are few products.</p>
+<p><strong>Steps:</strong></p>
+<ol class="arabic">
+<li><p>Open this menu:</p>
+<p><strong>Inventory app</strong> → <strong>Operations</strong> → <strong>Physical Inventory</strong></p>
+</li>
+</ol>
+<a class="reference internal image-reference" href="../_images/eg_image_010.png"><img alt="List of physical inventories" class="align-center" src="../_images/eg_image_010.png" style="width: 600px;" />
+</a>
+<ol class="arabic simple" start="2">
+<li><p>To create a new count, click the <strong>Create</strong> button.</p></li>
+<li><p>Add new rows. In each row, enter the following information:</p>
+<ul class="simple">
+<li><p><strong>Location</strong>: The place where counting is done</p></li>
+<li><p><strong>Product</strong>: The item being counted</p></li>
+<li><p><strong>Schedule Date</strong>: Expected counting date</p></li>
+<li><p><strong>User</strong>: The person doing the count</p></li>
+<li><p><strong>Counted Quantity</strong>: The actual quantity found</p></li>
+</ul>
+</li>
+</ol>
+<a class="reference internal image-reference" href="../_images/eg_image_011.png"><img alt="Adding a new counting row" class="align-center" src="../_images/eg_image_011.png" style="width: 600px;" />
+</a>
+<ol class="arabic simple" start="4">
+<li><p>After entering all rows, click the <strong>Apply all</strong> button at the top.</p></li>
+<li><p>A wizard window opens:</p></li>
+</ol>
+<a class="reference internal image-reference" href="../_images/eg_image_012.png"><img alt="Counting wizard" class="align-center" src="../_images/eg_image_012.png" style="width: 600px;" />
+</a>
+<ol class="arabic simple" start="6">
+<li><p>In this window, enter the following information:</p>
+<ul class="simple">
+<li><p><strong>Inventory Reason</strong>: Why you are doing the count (for example: periodic count,
+correction count)</p></li>
+<li><p><strong>Accounting Date</strong>: The date when the accounting record should be recorded</p></li>
+<li><p><strong>Counting Date</strong>: The date when the count was actually done</p></li>
+</ul>
+</li>
+<li><p>Click the <strong>Update Quantity</strong> button.</p></li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">نکته</p>
+<p>If there is a difference between the system quantity and the counted quantity,
+Odoo automatically creates a transfer document.</p>
+</div>
+</section>
+<section id="method-two-counting-with-excel-file">
+<h2>Method Two: Counting with Excel File<a class="headerlink" href="#method-two-counting-with-excel-file" title="Link to this heading">#</a></h2>
+<p>This method is very useful for large counts or when you have a lot of data. With this
+method, you can prepare data in Excel and then import it in bulk.</p>
+<p><strong>Steps:</strong></p>
+<ol class="arabic">
+<li><p>Go back to the Physical Inventory page and click the <strong>Import</strong> button.</p></li>
+<li><p>Create an Excel file with these columns:</p>
+<ul class="simple">
+<li><p><strong>Location / External ID</strong>: External ID of the location</p></li>
+<li><p><strong>Product / External ID</strong>: External ID of the product</p></li>
+<li><p><strong>User / External ID</strong>: External ID of the user</p></li>
+<li><p><strong>Schedule Date</strong>: Counting date</p></li>
+<li><p><strong>Counted Quantity</strong>: Quantity counted</p></li>
+</ul>
+<p>Example:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Location/External ID  | Product/External ID | User/External ID | Schedule Date | Counted Quantity
+WH01/Stock            | PROD001            | USER1           | 2024-01-15    | 50
+WH01/Stock            | PROD002            | USER1           | 2024-01-15    | 30
+</pre></div>
+</div>
+</li>
+<li><p>Save the Excel file and upload it in the Import page in Odoo.</p></li>
+<li><p>After successful upload, follow the same final steps as the manual method (steps 4-7).</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">توجه</p>
+<p>The Excel file must be set up correctly. Column names and data must match Odoo exactly.</p>
+</div>
+</section>
+</section>
+<section id="part-three-reports-and-monitoring">
+<h1>Part Three: Reports and Monitoring<a class="headerlink" href="#part-three-reports-and-monitoring" title="Link to this heading">#</a></h1>
+<p>Reports not only show the current situation. They also help identify and solve problems.
+In this section, we examine two important reports.</p>
+<section id="move-history-report">
+<h2>Move History Report<a class="headerlink" href="#move-history-report" title="Link to this heading">#</a></h2>
+<p>This report shows a complete list of all transfers done in the warehouse. For each
+product, its transfers are recorded.</p>
+<p>To access this report, follow this path:</p>
+<p><strong>Inventory app</strong> → <strong>Reporting</strong> → <strong>Move history</strong></p>
+<a class="reference internal image-reference" href="../_images/eg_image_013.png"><img alt="Move history report" class="align-center" src="../_images/eg_image_013.png" style="width: 600px;" />
+</a>
+<p><strong>How to use this report:</strong></p>
+<ul class="simple">
+<li><p>This report is useful for tracking transfer history.</p></li>
+<li><p>You can filter by date, product, or location.</p></li>
+<li><p>Each transfer shows the quantity, source, and destination.</p></li>
+</ul>
+</section>
+<section id="accounting-journal-entries-report">
+<h2>Accounting Journal Entries Report<a class="headerlink" href="#accounting-journal-entries-report" title="Link to this heading">#</a></h2>
+<p>Each count and adjustment creates one or more accounting entries. These entries record
+the changes in inventory value in the accounting system.</p>
+<p>To access these entries, follow this path:</p>
+<p><strong>Accounting app</strong> → <strong>Reporting</strong> → <strong>Journal Entries</strong></p>
+<a class="reference internal image-reference" href="../_images/eg_image_014.png"><img alt="Journal entries report" class="align-center" src="../_images/eg_image_014.png" style="width: 600px;" />
+</a>
+<p>To see the details of an entry, click on it:</p>
+<a class="reference internal image-reference" href="../_images/eg_image_015.png"><img alt="Journal entry details" class="align-center" src="../_images/eg_image_015.png" style="width: 600px;" />
+</a>
+<p><strong>How to read an accounting entry:</strong></p>
+<p>An accounting entry for inventory adjustment normally includes:</p>
+<ul class="simple">
+<li><p><strong>Entry Date</strong>: The date when the inventory change was approved</p></li>
+<li><p><strong>Description</strong>: A brief description of the adjustment</p></li>
+<li><p><strong>Accounts</strong>: Shows the accounts and amounts (debit and credit)</p></li>
+<li><p><strong>Reference</strong>: Link to the inventory document</p></li>
+<li><p><strong>Status</strong>: Posted (recorded) or Draft (not recorded)</p></li>
+</ul>
+</section>
+</section>
+<section id="best-practices-for-implementation">
+<h1>Best Practices for Implementation<a class="headerlink" href="#best-practices-for-implementation" title="Link to this heading">#</a></h1>
+<p>To successfully carry out the inventory valuation process, follow these recommendations:</p>
+<ol class="arabic simple">
+<li><p><strong>Initial Setup</strong>: Before starting, make sure all settings (warehouse, locations,
+categories, and accounting) are correct.</p></li>
+<li><p><strong>Team Training</strong>: Train all employees involved in the process to enter correct
+and accurate data.</p></li>
+<li><p><strong>Regular Monitoring</strong>: Regularly review reports and check for inventory differences.</p></li>
+<li><p><strong>Document the Reason</strong>: For each count, record a clear reason. This helps you
+identify problems later.</p></li>
+<li><p><strong>Regular Backups</strong>: Regularly back up your accounting and inventory data.</p></li>
+<li><p><strong>Periodic Review</strong>: At the end of each accounting period, review the entire
+process to ensure everything is correct.</p></li>
+</ol>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Practical Example: Inventory Valuation</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#part-one-system-setup-and-preparation">Part One: System Setup and Preparation</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-inventory-settings">General Inventory Settings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#managing-warehouses">Managing Warehouses</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#storage-locations">Storage Locations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#product-categories">Product Categories</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#product-settings">Product Settings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accounting-settings-for-inventory">Accounting Settings for Inventory</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#part-two-counting-and-physical-inventory-process">Part Two: Counting and Physical Inventory Process</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#method-one-manual-counting">Method One: Manual Counting</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#method-two-counting-with-excel-file">Method Two: Counting with Excel File</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#part-three-reports-and-monitoring">Part Three: Reports and Monitoring</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#move-history-report">Move History Report</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accounting-journal-entries-report">Accounting Journal Entries Report</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#best-practices-for-implementation">Best Practices for Implementation</a></li>
+</ul>
+
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  <div role="note" aria-label="source link">
+    <h3>صفحه فعلی</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/appendex/example_pritti_stock_valuation_en.rst.txt"
+            rel="nofollow">نمایش سورس</a></li>
+    </ul>
+   </div></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright ۱۴۰۵, اودوونیکس.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    ایجاد شده با<a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

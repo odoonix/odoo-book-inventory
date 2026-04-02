@@ -1,0 +1,607 @@
+
+<!DOCTYPE html>
+
+
+<html lang="fa" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>نمای Forecast محصول و نحوه پیاده‌سازی داده‌ها در Odoo &#8212; مستندات کتاب اودوو: انبارداری</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=c96429b2" />
+    <link rel="stylesheet" type="text/css" href="../_static/rtl.css?v=7489687e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=30788233"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/translations.js?v=5df48d09"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'appendex/forecasted_report_view';</script>
+    <link rel="index" title="فهرست" href="../genindex.html" />
+    <link rel="search" title="جستجو" href="../search.html" />
+    <link rel="next" title="نمونه عملی: ارزشگذاری انبار" href="example_pritti_stock_valuation.html" />
+    <link rel="prev" title="بررسی فرآیند رزرو در انبار اودوو ۱۷" href="reserved_quantity_explanation.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="fa"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">مستندات کتاب اودوو: انبارداری</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../introduction.html">
+    دیباچه
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../history.html">
+    تاریخچه
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../chapter001/index.html">
+    فصل اول: مفاهیم و اصول پایه انبارداری
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../chapter001/quize.html">
+    تمرین‌های فصل اول
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    پیوست‌ها
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="جستجو" aria-label="جستجو" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">جستجو</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="جستجو" aria-label="جستجو" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">جستجو</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../introduction.html">
+    دیباچه
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../history.html">
+    تاریخچه
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../chapter001/index.html">
+    فصل اول: مفاهیم و اصول پایه انبارداری
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../chapter001/quize.html">
+    تمرین‌های فصل اول
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    پیوست‌ها
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">فهرست مطالب:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="reserved_quantity_explanation.html">بررسی فرآیند رزرو در انبار اودوو ۱۷</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">نمای Forecast محصول و نحوه پیاده‌سازی داده‌ها در Odoo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example_pritti_stock_valuation.html">نمونه عملی: ارزشگذاری انبار</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="stock_valuation_physical_inventory_analysis.html">راهنمای آموزشی: چرا در Physical Inventory سند حسابداری ساخته نمی‌شود؟</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">پیوست‌ها</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">نمای Forecast محصول و نحوه پیاده‌سازی داده‌ها در Odoo</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="forecast-odoo">
+<h1>نمای Forecast محصول و نحوه پیاده‌سازی داده‌ها در Odoo<a class="headerlink" href="#forecast-odoo" title="Link to this heading">#</a></h1>
+<p>یکی از نماهایی که باری محصول استفاده می‌شود نمای focast هست که در اون اطلاعات متفاوتی
+از محصول نمایش داده می‌شود. می‌خواهم در این بخش تمام اجزای این نما رو نشون بدیم
+و به صورت کامل توضیح بدیم</p>
+<p>این صفحه همان <cite>Forecasted Report</cite> در انبار است که برای یک محصول نشان می‌دهد:</p>
+<ul class="simple">
+<li><p>الان چه مقدار موجودی واقعی داریم</p></li>
+<li><p>چه مقدار ورودی در راه داریم</p></li>
+<li><p>چه مقدار خروجی برنامه‌ریزی شده داریم</p></li>
+<li><p>و در نهایت موجودی پیش‌بینی‌شده چقدر می‌شود</p></li>
+</ul>
+<img alt="Forecasted Report" src="../_images/forecasted_report.png" />
+<section id="id1">
+<h2>اجزای اصلی صفحه<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<p>در بالای صفحه یک فرمول کلی نشان داده شده است. این فرمول کلی وضعیت محصول را در انبار
+به صورت تجمیع شده نشان می‌دهد. این فرمول شامل اطلاعات زیر است:</p>
+<ul class="simple">
+<li><p><strong>On Hand</strong>: موجودی واقعی فعلی (<cite>qty_available</cite>)</p></li>
+<li><p><strong>Incoming</strong>: ورودی‌های باز (<cite>incoming_qty</cite>)</p></li>
+<li><p><strong>Outgoing</strong>: خروجی‌های باز (<cite>outgoing_qty</cite>)</p></li>
+<li><p><strong>Forecasted</strong>: مقدار پیش‌بینی‌شده (<cite>virtual_available</cite>)</p></li>
+</ul>
+<img alt="Forecasted Report - Formula" src="../_images/forecast-chart.png" />
+<p>بر اساس این داده‌ها فرمولی که در بالای صفحه نمایش داده می‌شود به صورت زیر است.</p>
+<div class="math notranslate nohighlight">
+\[Forecasted = On Hand + Incoming - Outgoing\]</div>
+<p>تمام داده‌هایی که در قسمت‌های دیگر این نما آورده شده است در حقیقت می‌خواهد جزئیات این
+فرمول را تعیین کند.
+در ادامه هر کدام از بخش‌ها را بررسی می‌کنیم.</p>
+</section>
+<section id="forecast">
+<h2>جزئیات Forecast - جدول پایین<a class="headerlink" href="#forecast" title="Link to this heading">#</a></h2>
+<p>هر سطر جدول یک وضعیت تامین برای یک تقاضای خروج را نشان می‌دهد:</p>
+<ul class="simple">
+<li><p><strong>Reserved</strong>: مقدار از قبل رزرو شده</p></li>
+<li><p><strong>Inventory On Hand / Free Stock</strong>: از موجودی آزاد تامین می‌شود</p></li>
+<li><p><strong>Stock in Transit</strong>: موجودی در مسیر/ترانزیت</p></li>
+<li><p><strong>Not Available</strong>: کمبود داریم</p></li>
+</ul>
+<img alt="Forecasted Report - Formula" src="../_images/forecast-table.png" />
+<p>ستون‌هایی که در این جدول در نظر گرفته شده است عبارتند از:</p>
+<ul class="simple">
+<li><p><strong>Replenishment</strong>: نوع تامین</p></li>
+<li><p><strong>Receipt</strong>: تاریخ ورودی مرتبط</p></li>
+<li><p><strong>EA</strong>: مقدار</p></li>
+<li><p><strong>Used by</strong>: سند مصرف‌کننده (مثلاً فروش)</p></li>
+<li><p><strong>Delivery</strong>: تاریخ تحویل/خروج</p></li>
+</ul>
+<p>در حقیقت این جدول نشان می‌دهد که هر خروجی چطور می‌تواند تامین و در چه تاریخی انجام خواهد
+شد.
+اطلاعات این جدول بر اساس stock.move.line محاسبه می‌شود.</p>
+</section>
+<section id="id2">
+<h2>«چه مقدار برای چه کاری رزرو شده» چطور تعیین می‌شود؟<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<dl class="simple">
+<dt>این منطق در <cite>stock/report/stock_forecasted.py</cite> پیاده شده و متد کلیدی آن:</dt><dd><p><cite>_get_report_lines(...)</cite>
+است.</p>
+</dd>
+</dl>
+<p>روند کلی:</p>
+<ol class="arabic simple">
+<li><p>خروجی‌ها (<cite>outs</cite>) و ورودی‌ها (<cite>ins</cite>) در محدوده انبار انتخاب می‌شوند.</p></li>
+<li><p>برای هر خروجی، زنجیره حرکت‌های upstream با <cite>out._rollup_move_origs()</cite> بررسی می‌شود.</p></li>
+<li><dl class="simple">
+<dt>اگر حرکت upstream در حالت <cite>assigned</cite> یا <cite>partially_available</cite> باشد، مقدار رزرو از آن</dt><dd><p>برداشت می‌شود و خط <cite>reserved</cite> ساخته می‌شود.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>اگر تقاضا باقی بماند، به ترتیب از موارد زیر پوشش داده می‌شود:</dt><dd><ul class="simple">
+<li><p>موجودی آزاد</p></li>
+<li><p>موجودی ترانزیت</p></li>
+<li><p>ورودی‌ها</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>اگر باز هم تقاضا تامین نشود، خط <cite>Not Available</cite> ثبت می‌شود.</p></li>
+</ol>
+</section>
+<section id="used-by">
+<h2>چرا ستون Used by می‌گوید این رزرو برای کدام سند است؟<a class="headerlink" href="#used-by" title="Link to this heading">#</a></h2>
+<p>در خط خروجی، Odoo از <cite>move_out._get_source_document()</cite> استفاده می‌کند.</p>
+<ul class="simple">
+<li><p>در <cite>stock</cite> به طور پیش‌فرض سند اصلی Picking برمی‌گردد.</p></li>
+<li><p>در <cite>sale_stock</cite> این رفتار با <cite>sale_line_id</cite> گسترش پیدا می‌کند تا ارتباط با فروش
+قابل مشاهده باشد.</p></li>
+</ul>
+<p>به همین دلیل در نما می‌توانید ببینید هر مقدار خروج/رزرو برای چه سفارش یا چه سندی مصرف می‌شود.</p>
+</section>
+<section id="id3">
+<h2>نمودار Forecast از کجا می‌آید؟<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p>نمودار خطی بالای جدول از مدل گزارش SQL به نام <cite>report.stock.quantity</cite> می‌آید:</p>
+<ul class="simple">
+<li><p>فایل: <cite>stock/report/report_stock_quantity.py</cite></p></li>
+<li><p>view: <cite>report_stock_quantity</cite></p></li>
+</ul>
+<p>این view داده‌ها را روزانه و در سه state می‌سازد:</p>
+<ul class="simple">
+<li><p><cite>forecast</cite></p></li>
+<li><p><cite>in</cite></p></li>
+<li><p><cite>out</cite></p></li>
+</ul>
+<p>و کامپوننت فرانت‌اند با domain مربوط به محصول و انبار، فقط state=`forecast` را برای نمودار می‌خواند.</p>
+</section>
+<section id="id4">
+<h2>جمع‌بندی کاربردی<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>این نما فقط عدد کل نمی‌دهد؛ دقیقاً نشان می‌دهد تقاضا از چه منبعی تامین شده.</p></li>
+<li><p>اگر <cite>Not Available</cite> می‌بینید یعنی بعد از رزرو + موجودی آزاد + ترانزیت + ورودی‌ها هنوز کسری دارید.</p></li>
+<li><p>بنابراین همین گزارش بهترین نقطه برای تحلیل «چرا Forecast منفی شده» و «کدام سفارش‌ها باعث کمبود شده‌اند» است.</p></li>
+</ul>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="reserved_quantity_explanation.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">قبلی</p>
+        <p class="prev-next-title">بررسی فرآیند رزرو در انبار اودوو ۱۷</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="example_pritti_stock_valuation.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">بعدی</p>
+        <p class="prev-next-title">نمونه عملی: ارزشگذاری انبار</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">اجزای اصلی صفحه</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#forecast">جزئیات Forecast - جدول پایین</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">«چه مقدار برای چه کاری رزرو شده» چطور تعیین می‌شود؟</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#used-by">چرا ستون Used by می‌گوید این رزرو برای کدام سند است؟</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">نمودار Forecast از کجا می‌آید؟</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">جمع‌بندی کاربردی</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  <div role="note" aria-label="source link">
+    <h3>صفحه فعلی</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/appendex/forecasted_report_view.rst.txt"
+            rel="nofollow">نمایش سورس</a></li>
+    </ul>
+   </div></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright ۱۴۰۵, اودوونیکس.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    ایجاد شده با<a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

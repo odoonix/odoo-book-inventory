@@ -1,0 +1,848 @@
+
+<!DOCTYPE html>
+
+
+<html lang="fa" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>نمونه عملی: ارزشگذاری انبار &#8212; مستندات کتاب اودوو: انبارداری</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=c96429b2" />
+    <link rel="stylesheet" type="text/css" href="../_static/rtl.css?v=7489687e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=30788233"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/translations.js?v=5df48d09"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'appendex/example_pritti_stock_valuation';</script>
+    <link rel="index" title="فهرست" href="../genindex.html" />
+    <link rel="search" title="جستجو" href="../search.html" />
+    <link rel="next" title="راهنمای آموزشی: چرا در Physical Inventory سند حسابداری ساخته نمی‌شود؟" href="stock_valuation_physical_inventory_analysis.html" />
+    <link rel="prev" title="نمای Forecast محصول و نحوه پیاده‌سازی داده‌ها در Odoo" href="forecasted_report_view.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="fa"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">مستندات کتاب اودوو: انبارداری</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../introduction.html">
+    دیباچه
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../history.html">
+    تاریخچه
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../chapter001/index.html">
+    فصل اول: مفاهیم و اصول پایه انبارداری
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../chapter001/quize.html">
+    تمرین‌های فصل اول
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    پیوست‌ها
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="جستجو" aria-label="جستجو" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">جستجو</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="جستجو" aria-label="جستجو" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">جستجو</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../introduction.html">
+    دیباچه
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../history.html">
+    تاریخچه
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../chapter001/index.html">
+    فصل اول: مفاهیم و اصول پایه انبارداری
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../chapter001/quize.html">
+    تمرین‌های فصل اول
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    پیوست‌ها
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">فهرست مطالب:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="reserved_quantity_explanation.html">بررسی فرآیند رزرو در انبار اودوو ۱۷</a></li>
+<li class="toctree-l1"><a class="reference internal" href="forecasted_report_view.html">نمای Forecast محصول و نحوه پیاده‌سازی داده‌ها در Odoo</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">نمونه عملی: ارزشگذاری انبار</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="stock_valuation_physical_inventory_analysis.html">راهنمای آموزشی: چرا در Physical Inventory سند حسابداری ساخته نمی‌شود؟</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">پیوست‌ها</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">نمونه عملی: ارزشگذاری انبار</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="id1">
+<h1>نمونه عملی: ارزشگذاری انبار<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>اودوو یک نرم‌افزار مدیریت سازمانی یکپارچه (ERP) است که فرآیندهای انبارداری و حسابداری
+را به‌طور تنگاتنگ به هم متصل می‌سازد. این به معنی این است که هرگونه عملیاتی که در
+انبار انجام می‌شود، به صورت خودکار بر موجودی و حسابداری شرکت تأثیر می‌گذارد.</p>
+<p>ارزشگذاری انبار یکی از مهم‌ترین فرآیندهای این انتگرالیون است. این فرآیند برای
+تعیین ارزش موجودی و کنترل صحت آن ضروری است. اودوو این فرآیند را به‌طریقه‌ای
+جامع و خودکار پشتیبانی می‌کند.</p>
+<div class="admonition note">
+<p class="admonition-title">توجه</p>
+<p>برای مطالعه مستندات رسمی اودوو درباره شمارش انبار، بر روی
+<a class="reference external" href="https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.html">لینک مستندات اودوو</a>
+کلیک کنید.</p>
+</div>
+<p><strong>هدف این بخش:</strong></p>
+<p>در این فصل، شرکت پریتی دیزان را به عنوان نمونه‌ای عملی بررسی می‌کنیم. شامل:</p>
+<ul class="simple">
+<li><p>تنظیم صحیح اودوو برای فرآیند ارزشگذاری انبار</p></li>
+<li><p>مراحل شمارش انبار و انبارگردانی</p></li>
+<li><p>ارتباط فرآیند انبارگردانی با ثبت‌های حسابداری</p></li>
+<li><p>استفاده از گزارش‌ها برای نظارت و تشخیص مشکلات</p></li>
+<li><p>بهترین روش‌های اجرایی در سازمان</p></li>
+</ul>
+</section>
+<section id="id3">
+<h1>بخش اول: تنظیمات و آماده‌سازی سیستم<a class="headerlink" href="#id3" title="Link to this heading">#</a></h1>
+<p>تنظیمات سیستم، بنیاد صحیح برای فرآیند ارزشگذاری انبار است. این تنظیمات را می‌توان
+به چند سطح تقسیم کرد:</p>
+<ol class="arabic simple">
+<li><p><strong>تنظیمات کلی انبار</strong> - که برای کل سیستم اعمال می‌شود</p></li>
+<li><p><strong>تنظیمات مکان‌ها</strong> - که برای هر نقطه ذخیره‌سازی اعمال می‌شود</p></li>
+<li><p><strong>تنظیمات محصولات</strong> - که برای هر کالا اعمال می‌شود</p></li>
+<li><p><strong>تنظیمات حسابداری</strong> - که ارتباط بین انبار و دفاتر را برقرار می‌کند</p></li>
+</ol>
+<section id="id4">
+<h2>تنظیمات کلی انبار<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<p>تنظیمات کلی انبار بر کل فرآیندهای ارزشگذاری تأثیر می‌گذارد. برای دسترسی به این
+تنظیمات مسیر زیر را دنبال کنید:</p>
+<p><strong>Inventory app</strong> → <strong>Configuration</strong> → <strong>Settings</strong></p>
+<p>تصویر زیر تنظیمات کلی را نشان می‌دهد:</p>
+<a class="reference internal image-reference" href="../_images/eg_image_000.png"><img alt="تنظیمات کلی انبار" class="align-center" src="../_images/eg_image_000.png" style="width: 600px;" />
+</a>
+<p><strong>تنظیمات توصیه‌شده برای شرکت پریتی دیزان:</strong></p>
+<ul class="simple">
+<li><p><strong>Landed Cost</strong>: فعال (True) - این تنظیم اجازه می‌دهد هزینه‌های اضافی (مانند حمل
+و بیمه) را به ارزش محصولات اضافه کنید</p></li>
+<li><p><strong>Default Journal</strong>: Inventory Valuation - دفتر روزنامه‌ای که برای ثبت تغییرات
+ارزش انبار استفاده می‌شود</p></li>
+</ul>
+</section>
+<section id="id5">
+<h2>مدیریت انبارها<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<p>انبار، محلی فیزیکی است که در آن محصولات ذخیره می‌شوند. اودوو امکان مدیریت
+چندین انبار را فراهم می‌کند.</p>
+<p>برای ایجاد یا مدیریت انبارها، مسیر زیر را دنبال کنید:</p>
+<p><strong>Inventory app</strong> → <strong>Configuration</strong> → <strong>Warehouses</strong></p>
+<a class="reference internal image-reference" href="../_images/eg_image_001.png"><img alt="لیست انبارها" class="align-center" src="../_images/eg_image_001.png" style="width: 600px;" />
+</a>
+<p>در هر انبار، می‌توانید تنظیمات خاصی تعریف کنید:</p>
+<a class="reference internal image-reference" href="../_images/eg_image_002.png"><img alt="تنظیمات انبار" class="align-center" src="../_images/eg_image_002.png" style="width: 600px;" />
+</a>
+<p><strong>مهم‌ترین تنظیمات:</strong></p>
+<ul class="simple">
+<li><p><strong>شناسه انبار (Inventory Key)</strong>: یک کد منحصر برای شناخت انبار</p></li>
+<li><p><strong>مسیر ورودی (Input Location)</strong>: محلی که کالاهای دریافت‌شده به آنجا منتقل می‌شوند</p></li>
+<li><p><strong>مسیر خروجی (Output Location)</strong>: محلی که کالاهای فروخته‌شده از آنجا برداشته می‌شوند</p></li>
+</ul>
+</section>
+<section id="id6">
+<h2>مکان‌های ذخیره‌سازی<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<p>مکان (Location)، نقطه دقیق‌تری است که در داخل انبار تعریف می‌شود. برای مثال،
+یک انبار می‌تواند شامل قفسه‌های مختلف، محفظه‌های خاصی برای کالاهای گرم یا سرد، و...
+باشد.</p>
+<p>برای ایجاد یا مدیریت مکان‌ها، مسیر زیر را دنبال کنید:</p>
+<p><strong>Inventory app</strong> → <strong>Configuration</strong> → <strong>Locations</strong></p>
+<p>تصویر زیر مکان‌های شرکت پریتی دیزان را نشان می‌دهد:</p>
+<a class="reference internal image-reference" href="../_images/eg_image_003.png"><img alt="مکان‌های ذخیره‌سازی" class="align-center" src="../_images/eg_image_003.png" style="width: 600px;" />
+</a>
+<p><strong>نام‌گذاری مکان‌ها:</strong></p>
+<p>در شرکت پریتی، مکان‌ها با استفاده از الگوی زیر نام‌گذاری می‌شوند:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>{شناسه انبار}/Stock
+</pre></div>
+</div>
+<p>برای مثال: <code class="docutils literal notranslate"><span class="pre">WH01/Stock</span></code> یا <code class="docutils literal notranslate"><span class="pre">WH02/Stock</span></code></p>
+<p><strong>تنظیمات هر مکان:</strong></p>
+<p>هر مکان دارای تنظیمات خاصی است که برای دوره‌ای شمارش اهمیت دارند:</p>
+<a class="reference internal image-reference" href="../_images/eg_image_004.png"><img alt="تنظیمات مکان" class="align-center" src="../_images/eg_image_004.png" style="width: 600px;" />
+</a>
+<p>در تصویر بالا، نقطه شماره ۱ نشان می‌دهد:</p>
+<ul class="simple">
+<li><p><strong>طول دوره شمارش (Inventory Frequency)</strong>: تعیین می‌کند که هر چند روز یک بار
+انبار باید شمارش شود</p></li>
+<li><p><strong>آخرین تاریخ شمارش</strong>: به صورت خودکار ثبت می‌شود</p></li>
+<li><p><strong>تاریخ شمارش بعدی</strong>: بر اساس دوره تعیین‌شده محاسبه می‌شود</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">توجه</p>
+<p>اگر شمارش انبار به صورت دوره‌ای (مثلاً هر ۳ ماه) انجام شود، این تنظیمات کمک
+می‌کند تا به‌موقع انبار را شمارش کنید.</p>
+</div>
+</section>
+<section id="id7">
+<h2>دسته‌بندی محصولات<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<p>دسته‌بندی (Category)، ابزاری قدرتمند برای سازمان‌دهی محصولات است. هر دسته‌بندی
+می‌تواند تنظیمات خاص خود را داشته باشد که بر تمام محصولات در آن دسته اعمال می‌شود.</p>
+<p>برای مدیریت دسته‌بندی‌ها، مسیر زیر را دنبال کنید:</p>
+<p><strong>Inventory app</strong> → <strong>Configuration</strong> → <strong>Product Categories</strong></p>
+<a class="reference internal image-reference" href="../_images/eg_image_005.png"><img alt="دسته‌بندی‌های محصول" class="align-center" src="../_images/eg_image_005.png" style="width: 600px;" />
+</a>
+<p><strong>اهمیت دسته‌بندی‌ها:</strong></p>
+<p>دسته‌بندی‌های محصول برای فرآیند ارزشگذاری انبار بسیار مهم هستند. تنظیمات‌هایی
+مثل روش محاسبه ارزش (FIFO، LIFO، Weighted Average)، دفتر روزنامه‌ای برای انتقالات،
+و... در دسته‌بندی تعریف می‌شوند.</p>
+<a class="reference internal image-reference" href="../_images/eg_image_006.png"><img alt="تنظیمات دسته‌بندی محصول" class="align-center" src="../_images/eg_image_006.png" style="width: 600px;" />
+</a>
+<p><strong>ساختار دسته‌بندی‌های توصیه‌شده:</strong></p>
+<p>دسته‌بندی‌های محصول دارای ساختار سلسله‌مراتبی هستند. اودوو این ساختار را برای
+ارث‌برداری تنظیمات استفاده می‌کند. توصیه می‌شود از دسته‌بندی‌های اصلی زیر استفاده
+کنید:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>All (اصلی)
+├── Purchase (خریداری)
+├── Sale (فروش)
+├── Shipping (حمل‌ونقل)
+└── Consumable (مصرفی)
+</pre></div>
+</div>
+<p><strong>بهترین روش:</strong></p>
+<p>تمام دسته‌بندی‌های دیگر را به بخش تجارت الکترونیکی منتقل کنید. این کار سیستم را
+ساده‌تر و مدیریت تنظیمات را راحت‌تر می‌کند.</p>
+<div class="admonition note">
+<p class="admonition-title">توجه</p>
+<p>فیلد <strong>Inventory Valuation</strong> به‌طور معمول روی <strong>Real Time</strong> (یا Perpetual) تنظیم
+می‌شود. این بدان معنی است که هر زمان موجودی تغییر می‌کند، یک ثبت حسابداری
+به صورت خودکار ایجاد می‌شود.</p>
+</div>
+</section>
+<section id="id8">
+<h2>تنظیمات محصول<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<p>محصولات، هسته‌ی سیستم انبار هستند. تنظیمات درست هر محصول، بر صحت فرآیند ارزشگذاری
+تأثیر می‌گذارد.</p>
+<p>برای تنظیم محصولات، مسیر زیر را دنبال کنید:</p>
+<p><strong>Inventory app</strong> → <strong>Products</strong> → <strong>Products</strong></p>
+<a class="reference internal image-reference" href="../_images/eg_image_007.png"><img alt="لیست محصولات" class="align-center" src="../_images/eg_image_007.png" style="width: 600px;" />
+</a>
+<p><strong>انتخاب محصول و باز کردن تنظیمات:</strong></p>
+<p>محصول مورد نظر را انتخاب کنید تا فرم تنظیمات آن باز شود:</p>
+<a class="reference internal image-reference" href="../_images/eg_image_008.png"><img alt="تنظیمات محصول" class="align-center" src="../_images/eg_image_008.png" style="width: 600px;" />
+</a>
+<p><strong>تنظیمات توصیه‌شده برای محصول قابل فروش و انبار‌داری:</strong></p>
+<ul class="simple">
+<li><p><strong>Sale (فروش)</strong>: فعال باشد</p></li>
+<li><p><strong>Purchase (خریداری)</strong>: فعال باشد</p></li>
+<li><p><strong>Product Type</strong>: Good (محصول فیزیکی)</p></li>
+<li><p><strong>Track Inventory (ردگیری انبار)</strong>: فعال باشد</p></li>
+<li><p><strong>Category (دسته‌بندی)</strong>: All / Sale یا دسته‌بندی مناسب دیگر</p></li>
+</ul>
+<p><strong>نکته مهم:</strong></p>
+<p>تنظیمات بیشتری مثل روش محاسبه ارزش (Valuation Method)، و... به صورت خودکار
+از دسته‌بندی محصول به‌ارث می‌رسند. این امر کار را ساده می‌کند و اطمینان می‌دهد
+که تمام محصولات در یک دسته‌بندی، تنظیمات یکسانی داشته باشند.</p>
+</section>
+<section id="id9">
+<h2>تنظیمات حسابداری انبار<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<p>پس از تنظیم انبار، محصولات و دسته‌بندی‌ها، نیاز است که حسابداری را برای پذیرش
+اطلاعات انبار آماده کنید. این تنظیمات پل ارتباطی بین بخش انبار و دفاتر حسابداری
+است.</p>
+<p>برای دسترسی به این تنظیمات، مسیر زیر را دنبال کنید:</p>
+<p><strong>Accounting app</strong> → <strong>Configuration</strong> → <strong>Settings</strong></p>
+<div class="admonition warning">
+<p class="admonition-title">هشدار</p>
+<p>این تنظیمات تنها در نسخه <strong>Enterprise</strong> (حرفه‌ای) اودوو موجود است.
+اگر از نسخه <strong>Community</strong> استفاده می‌کنید، این امکانات دردسترس نیستند.</p>
+</div>
+<a class="reference internal image-reference" href="../_images/eg_image_009.png"><img alt="تنظیمات حسابداری انبار" class="align-center" src="../_images/eg_image_009.png" style="width: 600px;" />
+</a>
+<p><strong>تنظیمات توصیه‌شده:</strong></p>
+<ul>
+<li><p><strong>Inventory Valuation</strong>: Real Time (Perpetual)</p>
+<p>این نشان می‌دهد که تغییرات انبار به صورت فوری در حسابداری ثبت شوند.</p>
+</li>
+<li><p><strong>Periodic Valuation</strong>: Daily</p>
+<p>فرکانسی محاسبه‌ی مجدد ارزش موجودی.</p>
+</li>
+<li><p><strong>Inventory Cost Method</strong>: Average Cost (AVCO)</p>
+<p>روشی برای محاسبه‌ی ارزش میانگین محصولات. سایر روش‌ها عبارتند از FIFO و LIFO.</p>
+</li>
+<li><p><strong>Journal</strong>: Inventory Valuation</p>
+<p>دفتر روزنامه‌ای که برای ثبت‌های انبار استفاده می‌شود.</p>
+</li>
+</ul>
+<p>این تنظیم‌های کلی سیستم است. این تظیم‌ها پیش فرض است اما تنظیم‌هایی که در گروه محصولات هست
+این مقادیر را تغییر می‌دهد.</p>
+</section>
+</section>
+<section id="id10">
+<h1>بخش دوم: فرآیند شمارش و انبارگردانی<a class="headerlink" href="#id10" title="Link to this heading">#</a></h1>
+<p>حالا که تنظیمات کامل شد، می‌توانیم فرآیند واقعی شمارش انبار و انبارگردانی را آغاز کنیم.</p>
+<p>شرکت پریتی دیزان، از روش <strong>شمارش بر‌حسب نیاز</strong> استفاده می‌کند. به این معنی که
+انبارگردانی به صورت دوره‌ای نیست، بلکه هر زمان که نیاز باشد انجام می‌شود. برای این
+دلیل، تنظیمات انبار بر روی <strong>Real Time (Perpetual)</strong> تنظیم شده است.</p>
+<p><strong>روش‌های وارد کردن اطلاعات شمارش:</strong></p>
+<p>اودوو دو روش را برای ورود اطلاعات شمارش پشتیبانی می‌کند:</p>
+<ol class="arabic simple">
+<li><p><strong>روش دستی</strong>: برای شمارش‌های کوچک یا مختص</p></li>
+<li><p><strong>روش فایل Excel</strong>: برای شمارش‌های بزرگ و دسته‌ای</p></li>
+</ol>
+<section id="id11">
+<h2>روش اول: شمارش دستی<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<p>این روش برای شمارش‌های کوچک یا وقتی تعداد محصولات اندک است مناسب است.</p>
+<p><strong>مراحل:</strong></p>
+<p>۱. منو زیر را باز کنید:</p>
+<blockquote>
+<div><p><strong>Inventory app</strong> → <strong>Operations</strong> → <strong>Physical Inventory</strong></p>
+</div></blockquote>
+<a class="reference internal image-reference" href="../_images/eg_image_010.png"><img alt="لیست موجودی‌های فیزیکی" class="align-center" src="../_images/eg_image_010.png" style="width: 600px;" />
+</a>
+<p>۲. برای ایجاد شمارش جدید، دکمه <strong>Create</strong> را بزنید.</p>
+<p>۳. سطرهای جدیدی اضافه کنید. در هر سطر، اطلاعات زیر را تعیین کنید:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Location (مکان)</strong>: محلی که شمارش در آن انجام می‌شود</p></li>
+<li><p><strong>Product (محصول)</strong>: کالایی که شمارش می‌شود</p></li>
+<li><p><strong>Schedule Date (تاریخ برنامه‌ریزی)</strong>: تاریخ انتظار برای شمارش</p></li>
+<li><p><strong>User (کاربر)</strong>: شخصی که شمارش را انجام می‌دهد</p></li>
+<li><p><strong>Counted Quantity (مقدار شمارش‌شده)</strong>: تعداد کالایی که واقعاً وجود دارد</p></li>
+</ul>
+</div></blockquote>
+<a class="reference internal image-reference" href="../_images/eg_image_011.png"><img alt="افزودن سطر جدید برای شمارش" class="align-center" src="../_images/eg_image_011.png" style="width: 600px;" />
+</a>
+<p>۴. پس از وارد کردن تمام سطرها، دکمه <strong>Apply all</strong> را در بالای صفحه بزنید.</p>
+<p>۵. یک پنجره‌ی wizard باز می‌شود:</p>
+<a class="reference internal image-reference" href="../_images/eg_image_012.png"><img alt="wizard شمارش انبار" class="align-center" src="../_images/eg_image_012.png" style="width: 600px;" />
+</a>
+<p>۶. در این پنجره، اطلاعات زیر را تعیین کنید:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Inventory Reason (دلیل انبارگردانی)</strong>: دلیل انجام شمارش (مثلاً: شمارش دوره‌ای،
+شمارش تصحیحی)</p></li>
+<li><p><strong>Accounting Date (تاریخ حسابداری)</strong>: تاریخی که ثبت حسابداری باید در آن ثبت شود</p></li>
+<li><p><strong>Counting Date (تاریخ شمارش)</strong>: تاریخی که شمارش واقعاً انجام شده است</p></li>
+</ul>
+</div></blockquote>
+<p>۷. دکمه <strong>Update Quantity</strong> را بزنید.</p>
+<div class="admonition tip">
+<p class="admonition-title">نکته</p>
+<p>اگر تفاوتی بین موجودی سیستم و مقدار شمارش‌شده وجود داشته باشد،
+اودوو به صورت خودکار یک سند انتقال ایجاد می‌کند.</p>
+</div>
+</section>
+<section id="excel">
+<h2>روش دوم: شمارش با فایل Excel<a class="headerlink" href="#excel" title="Link to this heading">#</a></h2>
+<p>این روش برای شمارش‌های بزرگ و وقتی داده‌های زیادی وجود دارد بسیار مفید است. با این
+روش، می‌توانید داده‌ها را در Excel آماده کنید و سپس به صورت دسته‌ای وارد کنید.</p>
+<p><strong>مراحل:</strong></p>
+<p>۱. برای شروع، به صفحه Physical Inventory برگردید و دکمه <strong>Import</strong> را بزنید.</p>
+<p>۲. یک فایل Excel بسازید که ستون‌های زیر را داشته باشد:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Location / External ID</strong>: شناسه خارجی مکان</p></li>
+<li><p><strong>Product / External ID</strong>: شناسه خارجی محصول</p></li>
+<li><p><strong>User / External ID</strong>: شناسه خارجی کاربر</p></li>
+<li><p><strong>Schedule Date</strong>: تاریخ برنامه‌ریزی</p></li>
+<li><p><strong>Counted Quantity</strong>: مقدار شمارش‌شده</p></li>
+</ul>
+<p>مثال:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Location/External ID  | Product/External ID | User/External ID | Schedule Date | Counted Quantity
+WH01/Stock            | PROD001            | USER1           | 2024-01-15    | 50
+WH01/Stock            | PROD002            | USER1           | 2024-01-15    | 30
+</pre></div>
+</div>
+</div></blockquote>
+<p>۳. فایل Excel را ذخیره کنید و در صفحه Import در اودوو بارگذاری کنید.</p>
+<p>۴. پس از بارگذاری موفق، مراحل نهایی همانند روش دستی (مراحل ۴-۷) را دنبال کنید.</p>
+<div class="admonition note">
+<p class="admonition-title">توجه</p>
+<p>فایل Excel باید به‌طور دقیق تنظیم شود. نام‌های ستون‌ها و داده‌ها باید
+مطابق با اودوو باشند.</p>
+</div>
+</section>
+</section>
+<section id="id12">
+<h1>بخش سوم: گزارش‌ها و نظارت<a class="headerlink" href="#id12" title="Link to this heading">#</a></h1>
+<p>گزارش‌ها نه تنها وضعیت جاری را نشان می‌دهند، بلکه در شناسایی و حل مشکلات کمک می‌کنند.
+در این بخش، دو گزارش مهم را بررسی می‌کنیم.</p>
+<section id="id13">
+<h2>گزارش تاریخچه انتقالات<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
+<p>این گزارش یک فهرست کامل از تمام انتقالات انجام‌شده در انبار را نشان می‌دهد.
+برای هر محصول، انتقالات مربوط به آن ثبت می‌شود.</p>
+<p>برای دسترسی به این گزارش، مسیر زیر را دنبال کنید:</p>
+<p><strong>Inventory app</strong> → <strong>Reporting</strong> → <strong>Move history</strong></p>
+<a class="reference internal image-reference" href="../_images/eg_image_013.png"><img alt="گزارش تاریخچه انتقالات" class="align-center" src="../_images/eg_image_013.png" style="width: 600px;" />
+</a>
+<p><strong>راهنمایی استفاده:</strong></p>
+<ul class="simple">
+<li><p>این گزارش برای ردیابی تاریخ انتقالات مفید است.</p></li>
+<li><p>می‌توانید بر اساس تاریخ، محصول، یا مکان فیلتر کنید.</p></li>
+<li><p>هر انتقال، مقدار محصول، منشأ و مقصد را نشان می‌دهد.</p></li>
+</ul>
+</section>
+<section id="id14">
+<h2>گزارش سندهای حسابداری<a class="headerlink" href="#id14" title="Link to this heading">#</a></h2>
+<p>هر شمارش و انبارگردانی، یک یا چند سند حسابداری (Journal Entry) ایجاد می‌کند.
+این سندها، تغییرات ارزش انبار را در دفاتر حسابداری ثبت می‌کنند.</p>
+<p>برای دسترسی به این سندها، مسیر زیر را دنبال کنید:</p>
+<p><strong>Accounting app</strong> → <strong>Reporting</strong> → <strong>Journal Entries</strong></p>
+<a class="reference internal image-reference" href="../_images/eg_image_014.png"><img alt="گزارش سندهای حسابداری" class="align-center" src="../_images/eg_image_014.png" style="width: 600px;" />
+</a>
+<p>برای دیدن جزئیات یک سند، روی آن کلیک کنید:</p>
+<a class="reference internal image-reference" href="../_images/eg_image_015.png"><img alt="جزئیات سند حسابداری" class="align-center" src="../_images/eg_image_015.png" style="width: 600px;" />
+</a>
+<p><strong>تفسیر سند حسابداری:</strong></p>
+<p>یک سند حسابداری برای انبارگردانی معمولاً شامل موارد زیر است:</p>
+<ul class="simple">
+<li><p><strong>تاریخ سند</strong>: تاریخی که تغیر در انبار تایید شد</p></li>
+<li><p><strong>توصیف</strong>: شرح کوتاهی از انبارگردانی</p></li>
+<li><p><strong>صورت‌حساب‌ها</strong>: نمایش حساب‌های مربوط و مبالغ (بدهکار و بستانکار)</p></li>
+<li><p><strong>مرجع</strong>: ارتباط با سند انبار</p></li>
+<li><p><strong>وضعیت</strong>: Posted (ثبت‌شده) یا Draft (پیش‌نویس)</p></li>
+</ul>
+</section>
+</section>
+<section id="id15">
+<h1>بهترین روش‌های اجرایی<a class="headerlink" href="#id15" title="Link to this heading">#</a></h1>
+<p>برای اجرای موفق فرآیند ارزشگذاری انبار، توصیه‌های زیر را دنبال کنید:</p>
+<dl class="simple">
+<dt>۱. <strong>تنظیمات اولیه:</strong> قبل از شروع، اطمینان حاصل کنید که تمام تنظیمات (انبار، مکان‌ها،</dt><dd><p>دسته‌بندی‌ها، و حسابداری) به صحیح تنظیم شده‌اند.</p>
+</dd>
+<dt>۲. <strong>آموزش تیم:</strong> از تمام کارکنانی که در فرآیند دخیل هستند، آموزش دهید تا</dt><dd><p>داده‌های صحیح و دقیق وارد کنند.</p>
+</dd>
+</dl>
+<p>۳. <strong>نظارت منظم:</strong> به صورت منظم، گزارش‌ها را بررسی کنید و تفاوت‌های موجودی را کنترل کنید.</p>
+<dl class="simple">
+<dt>۴. <strong>ثبت دلیل:</strong> برای هر شمارش، دلیل روشن و مشخصی ثبت کنید تا بعداً</dt><dd><p>بتوانید مشکلات را تشخیص دهید.</p>
+</dd>
+</dl>
+<p>۵. <strong>بایک‌آپ منظم:</strong> داده‌های حسابداری و انبار را به صورت منظم پشتیبان بگیرید.</p>
+<dl class="simple">
+<dt>۶. <strong>بررسی دوره‌ای:</strong> در انتهای هر دوره مالی، کل فرآیند را بررسی کنید و</dt><dd><p>اطمینان حاصل کنید که همه‌چیز صحیح است.</p>
+</dd>
+</dl>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="forecasted_report_view.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">قبلی</p>
+        <p class="prev-next-title">نمای Forecast محصول و نحوه پیاده‌سازی داده‌ها در Odoo</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="stock_valuation_physical_inventory_analysis.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">بعدی</p>
+        <p class="prev-next-title">راهنمای آموزشی: چرا در Physical Inventory سند حسابداری ساخته نمی‌شود؟</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">نمونه عملی: ارزشگذاری انبار</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">بخش اول: تنظیمات و آماده‌سازی سیستم</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">تنظیمات کلی انبار</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">مدیریت انبارها</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">مکان‌های ذخیره‌سازی</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">دسته‌بندی محصولات</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">تنظیمات محصول</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">تنظیمات حسابداری انبار</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">بخش دوم: فرآیند شمارش و انبارگردانی</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">روش اول: شمارش دستی</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#excel">روش دوم: شمارش با فایل Excel</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">بخش سوم: گزارش‌ها و نظارت</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">گزارش تاریخچه انتقالات</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">گزارش سندهای حسابداری</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">بهترین روش‌های اجرایی</a></li>
+</ul>
+
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  <div role="note" aria-label="source link">
+    <h3>صفحه فعلی</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/appendex/example_pritti_stock_valuation.rst.txt"
+            rel="nofollow">نمایش سورس</a></li>
+    </ul>
+   </div></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright ۱۴۰۵, اودوونیکس.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    ایجاد شده با<a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
